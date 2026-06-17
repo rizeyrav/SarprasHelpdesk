@@ -9,8 +9,8 @@ public class AppDbContext
     }
     public NpgsqlConnection CreateConnection()
     {
-        return new NpgsqlConnection(
-            _configuration.GetConnectionString("DefaultConnection"));
+        var connectionString = _configuration.GetConnectionString("DefaultConnection");
+        return new NpgsqlConnection(connectionString);
     
     }
 }
