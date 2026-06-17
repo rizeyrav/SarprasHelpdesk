@@ -1,4 +1,6 @@
 using Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns;
+using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore;
 using SarprasHelpdesk.Data;
 using SarprasHelpdesk.Hubs;
 using SarprasHelpdesk.Repositories;
@@ -6,6 +8,8 @@ using SarprasHelpdesk.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+// builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<AppDbContext>();
