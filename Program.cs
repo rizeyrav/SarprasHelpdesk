@@ -1,6 +1,5 @@
 using Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns;
 using Microsoft.Extensions.Options;
-using Microsoft.EntityFrameworkCore;
 using SarprasHelpdesk.Data;
 using SarprasHelpdesk.Hubs;
 using SarprasHelpdesk.Repositories;

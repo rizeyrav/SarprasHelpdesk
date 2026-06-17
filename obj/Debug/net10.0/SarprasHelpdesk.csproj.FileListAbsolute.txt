@@ -198,3 +198,8 @@ E:\IGA Project\SarprasHelpdesk\obj\Debug\net10.0\swae.build.ex.cache
 E:\IGA Project\SarprasHelpdesk\obj\Debug\net10.0\SarprasH.ED43C2FE.Up2Date
 E:\IGA Project\SarprasHelpdesk\obj\Debug\net10.0\SarprasHelpdesk.genruntimeconfig.cache
 E:\IGA Project\SarprasHelpdesk\obj\Debug\net10.0\ref\SarprasHelpdesk.dll
+D:\SarprasHelpdesk\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+D:\SarprasHelpdesk\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\SarprasHelpdesk\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\SarprasHelpdesk\bin\Debug\net10.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\SarprasHelpdesk\obj\Debug\net10.0\SarprasHelpdesk.sourcelink.json

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SarprasHelpdesk")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0d3fc061e8400dd8bfcedb122a807fa2aa9383b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97276acd7e8c3b086d63ba65378a82228cc698e8")]
 [assembly: System.Reflection.AssemblyProductAttribute("SarprasHelpdesk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SarprasHelpdesk")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
