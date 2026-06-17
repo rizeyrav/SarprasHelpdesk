@@ -12,6 +12,8 @@ builder.Services.AddScoped<AppDbContext>();
 builder.Services.AddScoped<ILaporanRepository, LaporanRepository>();
 builder.Services.AddScoped<ILaporanService, LaporanService>();
 builder.Services.AddSignalR();
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+builder.WebHost.UseUrls($"http://+:{port}");
 
 var app = builder.Build();
 
