@@ -1,0 +1,50 @@
+@using SarprasHelpdesk.Models.Responses
+@model DashboardSummary
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2>Dashboard Sarpras</h2>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5>Laporan Masuk</h5>
+                <h1>
+                    @Model.TotalLaporanMasuk
+                </h1>
+                <a asp-controller="Laporan" asp-action="Index" class="btn btn-primary">
+                    Daftar Laporan Masuk
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5>Selesai Diperbaiki</h5>
+                <h1>
+                    @Model.TotalLaporanSelesai
+                </h1>
+                <a asp-controller="Perbaikan" asp-action="Index" class="btn btn-success">
+                    Daftar Hasil Perbaikan
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5>Pihak Ketiga</h5>
+                <h1>
+                    @Model.TotaldiTeruskan
+                </h1>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,56 @@
+@model SarprasHelpdesk.Models.Requests.CreateLaporanRequest
+
+@{
+    ViewData["Title"] = "Form Registrasi Laporan Kerusakan";
+}
+
+<h2>Laporan Kerusakan Sarpras</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+
+    <div class="mb-3">
+        <label asp-for="Pelapor" class="form-label"></label>
+        <input asp-for="Pelapor" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Bidang" class="form-label"></label>
+        <input asp-for="Bidang" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Foto" class="form-label"></label>
+        <input asp-for="Foto" type="file" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Kategori" class="form-label"></label>
+        <select asp-for="Kategori" class="form-select">
+            <option value="">Pilih Kategori</option>
+            <option>Komputer/Laptop</option>
+            <option>Printer</option>
+            <option>Jaringan</option>
+        </select>
+    </div>
+    
+
+    <div class="mb-3">
+        <label asp-for="Deskripsi" class="form-label"></label>
+        <textarea asp-for="Deskripsi"
+                  class="form-control"
+                  rows="5">
+        </textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Kirim Laporan
+    </button>
+
+</form>

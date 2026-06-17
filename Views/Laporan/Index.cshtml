@@ -1,0 +1,91 @@
+@model IEnumerable<SarprasHelpdesk.Models.Responses.LaporanListResponse>
+
+<h2>Daftar Laporan</h2>
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>No Tiket</th>
+            <th>Pelapor</th>
+            <th>Kategori</th>
+            <th>Status</th>
+            @* <th>Kepuasan</th> *@
+            <th>Aksi</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@item.No_Tiket</td>
+
+                <td>@item.Pelapor</td>
+
+                <td>@item.Kategori</td>
+
+                <td>
+                    <select class="form-select status-select" data-id="@item.Id">
+                        <option value="Diproses" selected="@(item.Status == "Diproses")">
+                            Diproses
+                        </option>
+
+                        <option value="Selesai" selected="@(item.Status == "Selesai")">
+                            Selesai
+                        </option>
+
+                        <option value="Diteruskan Pihak Ketiga" selected="@(item.Status == "Diteruskan Pihak Ketiga")">
+                            Diteruskan Pihak Ketiga
+                        </option>
+                    </select>
+                </td>
+
+                @* <td>
+                @(item.NilaiKepuasan?.ToString() ?? "-")
+            </td> *@
+
+                <td>
+
+                    <a asp-action="Detail" asp-route-id="@item.Id" class="btn btn-primary btn-sm">
+                        Detail
+                    </a>
+
+                </td>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+
+@section Scripts
+{
+    <script>
+        document.querySelectorAll('.status-select')
+            .forEach(select => {
+
+                select.addEventListener('change', async function () {
+
+                    const id = this.dataset.id;
+                    const status = this.value;
+
+                    await fetch('/Laporan/UpdateStatus', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            id: id,
+                            status: status
+                        })
+                    });
+
+                });
+
+            });
+    </script>
+}
